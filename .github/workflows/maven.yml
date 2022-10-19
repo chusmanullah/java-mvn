@@ -3,8 +3,8 @@
 name: Build and Deploy jar to edh_bdr edge-node
 # do the action one
 on:
- push:
-   branches: [ master ]
+  push:
+    branches: [ master ]
 # here we mention what operating system job should be runing on
 # a list of supported OS is found on follwing URL
 # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
@@ -17,13 +17,14 @@ on:
 # 		- we use scp "Secure copy protocol" to copy files | FTP can also be used
 # 		- we use provided values in secrets | port number | "jar file name" | "target folder string"
 jobs:
-   build:
-   runs-on: ubuntu-latest
-   steps:
-     - name: step1 - checkout from github
-       uses: actions/checkout@v2
-	 
-     - name: step2 - specify correct java version
-       uses: actions/setup-java@v1
-       with:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: step1 - checkout from github
+      uses: actions/checkout@v2
+
+    - name: step2 - specify correct java version
+      uses: actions/setup-java@v1
+      with:
         java-version: 1.8
+        
