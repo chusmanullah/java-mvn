@@ -27,4 +27,13 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-        
+
+    - name: step 3 - Build the maven project
+      run: mvn -B package --file pom.xml
+    - name: step 4 - List the current directroy
+      run: ls -a
+
+    - name: step 5 - move to target directory
+      run: |
+          cd target
+          ls -a
