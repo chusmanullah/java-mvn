@@ -4,7 +4,7 @@ name: Build and Deploy jar to edh_bdr edge-node
 # do the action one
 on:
 	push:
-		branches:[release]
+		branches:[master]
 		
 # here we mention what operating system job should be runing on
 
